@@ -1,4 +1,11 @@
-import { Button, Image, Text, TouchableOpacity, View } from 'react-native';
+import {
+  Image,
+  Pressable,
+  Text,
+  TouchableHighlight,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 
 const App = () => {
@@ -27,6 +34,17 @@ const App = () => {
           Click Me button
         </Text>
       </TouchableOpacity>
+
+      {/* <TouchableHighlight onPress={() => alert('Touchable Highlight Pressed!')}>
+        <Text>Touchable Highlight</Text>
+      </TouchableHighlight> */}
+      <Pressable
+        style={{ backgroundColor: 'blue', padding: 10, borderRadius: 5 }}
+        onPress={() => alert('Pressable Pressed!')}
+        onHoverIn={() => console.log(<Text> 'Mouse entered' </Text>)}
+      >
+        <Text style={{ color: 'white', fontWeight: 'bold' }}>Pressable</Text>
+      </Pressable>
     </View>
   );
 };
