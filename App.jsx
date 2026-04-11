@@ -2,50 +2,57 @@ import {
   Image,
   Pressable,
   Text,
-  TouchableHighlight,
   TouchableOpacity,
-  View,
+  useColorScheme,
 } from 'react-native';
 import React from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import styles from './styles/App.styles';
 
 const App = () => {
+  //Mobile current theme
+  const theme = useColorScheme();
+  const isDarkMode = theme === 'dark';
+  const backgroundColor = isDarkMode ? '#000' : '#d1faff';
+  const TextColor = isDarkMode ? 'white' : '#012c31';
+
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 20,
-      }}
+    <SafeAreaView
+      style={[styles.container, { backgroundColor: backgroundColor }]}
+      edges={['top', 'bottom', 'left', 'right']}
     >
-      <Text style={{ fontSize: 60, fontWeight: 'bold' }}>Hello World</Text>
+      <Text style={[styles.text1, { color: TextColor }]}>Hello World</Text>
+      <Text style={[styles.text2, { color: TextColor }]}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+        incidunt nobis rerum sunt aperiam cupiditate aliquid quidem architecto
+        minima repellat.
+      </Text>
       <Image
+        style={styles.image}
         source={{
           uri: 'https://reactnative.dev/img/tiny_logo.png',
         }}
-        style={{ width: 200, height: 200 }}
       />
       {/* <Button title="Click Me" onPress={() => alert('Button Pressed!')} /> */}
       <TouchableOpacity
-        style={{ backgroundColor: 'blue', padding: 10, borderRadius: 5 }}
+        style={styles.button}
         onPress={() => alert('Button Pressed!')}
       >
-        <Text style={{ color: 'white', fontWeight: 'bold' }}>
+        <Text style={[styles.buttonText, { color: TextColor }]}>
           Click Me button
         </Text>
       </TouchableOpacity>
-
       {/* <TouchableHighlight onPress={() => alert('Touchable Highlight Pressed!')}>
         <Text>Touchable Highlight</Text>
       </TouchableHighlight> */}
       <Pressable
-        style={{ backgroundColor: 'blue', padding: 10, borderRadius: 5 }}
+        style={styles.button}
         onPress={() => alert('Pressable Pressed!')}
-        onHoverIn={() => console.log(<Text> 'Mouse entered' </Text>)}
+        onHoverIn={() => console.log('Mouse entered')}
       >
-        <Text style={{ color: 'white', fontWeight: 'bold' }}>Pressable</Text>
+        <Text style={styles.buttonText}>Pressables</Text>
       </Pressable>
-    </View>
+    </SafeAreaView>
   );
 };
 
