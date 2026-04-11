@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#d1faff',
+    backgroundColor: '#fcfcfc',
     gap: 20,
     padding: 20,
   },
@@ -25,12 +25,12 @@ const styles = StyleSheet.create({
   },
 
   text1: {
-    fontSize: 20,
+    fontSize: 60,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   text2: {
-    fontSize: 14,
+    fontSize: 30,
     textAlign: 'center',
   },
   input: {
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     fontSize: 16,
   },
-  
+
   //   buttonText: {
   //     color: 'white',
   //     fontWeight: 'bold',
