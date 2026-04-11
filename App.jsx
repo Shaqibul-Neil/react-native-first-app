@@ -1,10 +1,14 @@
-import { FlatList, Image, Text, View } from 'react-native';
-import React from 'react';
-
+import { FlatList, Image, Text, TextInput, View, Button } from 'react-native';
+import React, { useState } from 'react';
 import styles from './styles/App.styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const App = () => {
+  const [inputValue, setInputValue] = useState('');
+  const [submittedValue, setSubmittedValue] = useState('');
+  const handleSubmit = () => {
+    setSubmittedValue(inputValue);
+  };
   //Mobile current theme
   // const theme = useColorScheme();
   // const isDarkMode = theme === 'dark';
@@ -14,7 +18,7 @@ const App = () => {
   const data = [
     {
       id: 1,
-      name: 'John Doe',
+      name: 'John Dos',
       email: 'john.doe@example.com',
       image: 'https://randomuser.me/api/portraits/men/1.jpg',
     },
@@ -77,7 +81,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Always use flatlist to display lists of data -- shows only the items that are currently visible on the screen -- memory efficient -- donot use scrollview because it loads all items at once */}
-      <FlatList
+      {/* <FlatList
         data={data}
         renderItem={({ item }) => (
           <View key={item.id} style={styles.card}>
@@ -95,7 +99,19 @@ const App = () => {
         // extra data refers to any additional data that the flatlist needs to re-render when it changes -- if the data is not changing, we can ignore it -- if the data is changing, we need to pass it as extra data to the flatlist so that it can re-render when the data changes
         extraData={data}
         // horizontal
+      /> */}
+
+      {/* Input */}
+      <TextInput
+        style={styles.input}
+        placeholder="Enter a text..."
+        value={inputValue}
+        onChangeText={text => setInputValue(text)}
       />
+      {/* Button */}
+      <Button style={styles.button} title="Submit" onPress={handleSubmit} />
+      {submittedValue ? 
+      <Text>Result : {submittedValue}</Text>: null}
     </SafeAreaView>
   );
 };

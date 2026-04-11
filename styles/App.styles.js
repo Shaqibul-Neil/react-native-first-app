@@ -33,16 +33,17 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
   },
-  //   button: {
-  //     backgroundColor: '#3a3a3a',
-  //     borderRadius: 50,
-  //     borderWidth: 2,
-  //     borderBottomColor: '#ff0000d0',
-  //     paddingVertical: 10,
-  //     paddingHorizontal: 20,
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //   },
+  input: {
+    width: '100%',
+    height: 50,
+    borderWidth: 1,
+    borderColor: '#ff0000',
+    borderRadius: 10,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    fontSize: 16,
+  },
+  
   //   buttonText: {
   //     color: 'white',
   //     fontWeight: 'bold',
