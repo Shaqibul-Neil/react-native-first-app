@@ -13,13 +13,16 @@ const Home = ({ navigation }) => {
       }}
     >
       <Text style={styles.text2}>Home</Text>
+      {/*  navigation.replace('Search') => replaces the current screen with the new one, so you can't go back to the previous screen */}
       <Button
         title="Go to Search"
-        onPress={() => navigation.navigate('Search')}
+        onPress={() => navigation.replace('Search')}
       />
       <Button
         title="Go to Profile"
-        onPress={() => navigation.navigate('Profile')}
+        onPress={() =>
+          navigation.navigate('Profile', { id: 1, name: 'John Doe' })
+        }
       />
     </View>
   );

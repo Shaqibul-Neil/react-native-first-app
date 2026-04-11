@@ -11,10 +11,25 @@ import { NavigationContainer } from '@react-navigation/native';
 const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Search" component={Search} />
+    <Stack.Navigator
+      initialRouteName="Home"
+      screenOptions={{ headerStyle: { backgroundColor: 'yellow' } }}
+    >
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Home"
+        component={Home}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
+        options={{ title: 'My Profile' }}
+      />
+      <Stack.Screen
+        name="Search"
+        component={Search}
+        options={{ headerStyle: { backgroundColor: 'red' } }}
+      />
     </Stack.Navigator>
   );
 };
