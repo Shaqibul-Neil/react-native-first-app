@@ -4,7 +4,7 @@ import styles from '../../styles/App.styles';
 
 const Profile = ({ navigation, route }) => {
   console.log(route.params);
-  const { id, name } = route.params;
+  const { id, name } = route.params || {};
 
   return (
     <View
