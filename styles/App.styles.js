@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#ffe4e4',
+    backgroundColor: '#fcf5f5',
     padding: '10%',
   },
   title: {
@@ -29,6 +29,30 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontWeight: 'bold',
     fontSize: 18,
+  },
+  headingContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 10,
+    padding: 10,
+  },
+  headingText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#030303',
+  },
+  itemContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+    marginBottom: 10,
+    borderRadius: 10,
+  },
+  itemText: {
+    fontSize: 16,
+    fontWeight: 500,
+    color: '#333',
   },
   tabbar: {
     flexDirection: 'row',

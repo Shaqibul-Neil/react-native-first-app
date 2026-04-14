@@ -31,6 +31,13 @@ const getTextStyle = (view, id) => [
   },
 ];
 
+const data = [
+  { id: 1, name: 'Wheat', stock: 25, unit: 'kg' },
+  { id: 2, name: 'Rice', stock: 20, unit: 'kg' },
+  { id: 3, name: 'Wheat', stock: 5, unit: 'kg' },
+  { id: 4, name: 'Rice', stock: 10, unit: 'kg' },
+];
+
 const Home = ({ navigation }) => {
   const [view, setView] = useState(0);
   return (
@@ -47,8 +54,8 @@ const Home = ({ navigation }) => {
           </Pressable>
         ))}
       </View>
-      {view === 0 && <AllItems />}
-      {view === 1 && <LowStock />}
+      {view === 0 && <AllItems data={data} />}
+      {view === 1 && <AllItems data={data.filter(item => item.stock < 20)} />}
       {view === 2 && <CreateItem />}
     </SafeAreaView>
   );
