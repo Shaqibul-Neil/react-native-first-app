@@ -2,6 +2,35 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#ffe4e4',
+    padding: '10%',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 20,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 20,
+  },
+  button: {
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    borderWidth: 2,
+    backgroundColor: '#ffffff',
+  },
+  buttonText: {
+    color: '#000000',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  tabbar: {
     flexDirection: 'row',
     position: 'absolute',
     bottom: 20,

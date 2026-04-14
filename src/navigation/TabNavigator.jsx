@@ -77,7 +77,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from '../screens/Home';
+import Home from '../screens/home/Home';
 import Profile from '../screens/Profile';
 import Search from '../screens/Search';
 import CustomTabBar from '../components/CustomTabBar';

@@ -37,7 +37,7 @@ const ICONS = {
   */
 const CustomTabBar = ({ state, descriptors, navigation }) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.tabbar}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         //route.key--> Every tab gets a unique internal ID. state.routes = [
