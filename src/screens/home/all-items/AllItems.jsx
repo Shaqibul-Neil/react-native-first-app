@@ -4,7 +4,7 @@ import styles from '../../../../styles/App.styles';
 
 const AllItems = ({ data }) => {
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.headingContainer}>
         <Text style={styles.headingText}>Items</Text>
         <Text style={styles.headingText}>Quantity</Text>

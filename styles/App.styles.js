@@ -5,12 +5,23 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#fcf5f5',
-    padding: '10%',
+    padding: '4%',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#333',
+    marginBottom: 20,
+  },
+  input: {
+    width: '100%',
+    height: 50,
+    borderWidth: 1,
+    borderColor: '#ff0000',
+    borderRadius: 10,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    fontSize: 16,
     marginBottom: 20,
   },
   buttonContainer: {
@@ -24,6 +35,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 2,
     backgroundColor: '#ffffff',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   buttonText: {
     color: '#000000',
